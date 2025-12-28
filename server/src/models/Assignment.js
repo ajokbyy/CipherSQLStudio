@@ -25,6 +25,11 @@ const assignmentSchema = new mongoose.Schema({
     hints: [{
         type: String
     }],
+    examples: [{
+        inputText: String, // e.g., "Input: \n Employee table: ..."
+        outputText: String, // e.g., "Output: \n ..."
+        explanation: String
+    }],
     defaultCode: {
         type: String,
         default: '-- Write your query here\nSELECT * FROM table_name;'

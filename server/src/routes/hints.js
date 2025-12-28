@@ -14,11 +14,13 @@ router.post('/', async (req, res) => {
         "Try using a subquery to filter the results first."
     ];
 
-    const randomHint = hints[Math.floor(Math.random() * hints.length)];
+    // Shuffle and pick 3 unique hints
+    const shuffled = hints.sort(() => 0.5 - Math.random());
+    const selectedHints = shuffled.slice(0, 3);
 
     // Simulate API delay
     setTimeout(() => {
-        res.json({ hint: `Simulated AI Hint: ${randomHint}` });
+        res.json({ hints: selectedHints });
     }, 1000);
 });
 

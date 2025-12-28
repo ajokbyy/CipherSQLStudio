@@ -1,18 +1,32 @@
 :root {
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
-  --bg-tertiary: #334155;
-  --accent-primary: #3b82f6;
-  --accent-hover: #2563eb;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --success: #10b981;
-  --error: #ef4444;
-  --border-color: rgba(148, 163, 184, 0.1);
-  --glass-bg: rgba(30, 41, 59, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  /* Default Dark Theme */
+  --bg-primary: #0f1115;
+  --bg-secondary: #1a1e23;
+  --bg-tertiary: #252a30;
+  --text-primary: #f0f0f0;
+  --text-secondary: #9ca3af;
+  --accent-primary: #f97316;
+  --accent-hover: #ea580c;
+  --border-color: #333333;
+  --glass-bg: #1a1e23;
+  --glass-border: #333333;
+
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'Fira Code', monospace;
+}
+
+[data-theme='light'] {
+  --bg-primary: #f9fafb;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f3f4f6;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --accent-primary: #f97316;
+  /* Keep orange as brand color */
+  --accent-hover: #ea580c;
+  --border-color: #e5e7eb;
+  --glass-bg: #ffffff;
+  --glass-border: #e5e7eb;
 }
 
 * {
@@ -74,7 +88,9 @@ body {
   }
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 700;
   letter-spacing: -0.025em;
   margin-bottom: 0.5rem;

@@ -17,6 +17,8 @@ connectMongo();
 app.use('/api/assignments', require('./routes/assignments'));
 app.use('/api/execute', require('./routes/execute'));
 app.use('/api/hints', require('./routes/hints'));
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/attempts', require('./routes/attempts'));
 
 
 // Routes Placeholder

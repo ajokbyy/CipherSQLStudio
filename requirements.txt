@@ -1,0 +1,40 @@
+SYSTEM REQUIREMENTS & PREREQUISITES
+===================================
+
+Before running the CipherSQLStudio application, please ensure your system meets the following requirements.
+
+1. NODE.JS RUNTIME
+   - Required for: Running both the Frontend (React/Vite) and Backend (Express).
+   - Version: v16.0.0 or higher (v18+ recommended).
+   - Download: https://nodejs.org/
+   - Verify installation:
+     Terminal: node -v
+     Terminal: npm -v
+
+2. POSTGRESQL DATABASE
+   - Required for: Storing SQL problems and executing user queries (Assignment Data).
+   - Version: v12.0 or higher.
+   - Download: https://www.postgresql.org/download/
+   - Verify installation:
+     Terminal: psql --version
+   - Note: You must remember your 'postgres' user password to configure the .env file.
+
+3. MONGODB DATABASE
+   - Required for: Storing User accounts, progress, and problem descriptions (Application Data).
+   - Version: v4.0 or higher (or use MongoDB Atlas Cloud).
+   - Download (Community Server): https://www.mongodb.com/try/download/community
+   - Verify installation:
+     Terminal: mongodp --version
+
+4. BROWSER
+   - A modern web browser (Chrome, Firefox, Edge, Safari).
+   - Required for: Accessing the web application.
+
+OPTIONAL BUT RECOMMENDED
+========================
+
+5. GIT
+   - Required for: Cloning the repository and version control.
+6. VISUAL STUDIO CODE (or any Code Editor)
+   - Recommended for: Viewing and editing the project code.
+  

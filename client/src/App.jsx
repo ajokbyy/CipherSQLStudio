@@ -1,20 +1,26 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-// Pages Placeholder
-const Home = () => <div className="p-4"><h1>Home Page</h1></div>;
-const Workspace = () => <div className="p-4"><h1>Workspace</h1></div>;
+import Home from './pages/Home';
+import Workspace from './pages/Workspace';
+import { ThemeProvider } from './context/ThemeContext';
+import { AuthProvider } from './context/AuthContext';
+import Login from './pages/Login';
 
 function App() {
     return (
-        <Router>
-            <div className="app-container">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/workspace/:id" element={<Workspace />} />
-                </Routes>
-            </div>
-        </Router>
+        <AuthProvider>
+            <ThemeProvider>
+                <Router>
+                    <div className="app-container">
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/login" element={<Login />} />
+                            <Route path="/workspace/:id" element={<Workspace />} />
+                        </Routes>
+                    </div>
+                </Router>
+            </ThemeProvider>
+        </AuthProvider>
     );
 }
 
